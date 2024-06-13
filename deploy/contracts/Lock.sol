@@ -24,7 +24,7 @@ contract Vending{
     }
 
     function restock(uint amount) public onlyOwner{
-        balances[address(this)] = amount;
+        balances[address(this)] += amount;
     }
 
     function getBalance()public view returns(uint){
