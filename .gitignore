@@ -34,3 +34,36 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+node_modules
+.env
+
+# Hardhat files
+/cache
+/artifacts
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+
+./deploy/node_modules
+
+# Hardhat files
+./deploy/cache
+./deploy/artifacts
+
+# TypeChain files
+./deploy/typechain
+./deploy/typechain-types
+
+# solidity-coverage files
+./deploy/coverage
+./deploy/coverage.json
+
+# Hardhat Ignition default folder for deployments against a local node
+./deploy/ignition/deployments/chain-31337
