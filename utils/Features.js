@@ -4,3 +4,6 @@ export const showAddress = (address) => {
     address.length - 4
   )}`;
 };
+
+export const numberFormat = (number) =>
+  new Intl.NumberFormat().format(Number(number));

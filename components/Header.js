@@ -1,12 +1,9 @@
 import { walletContext } from "@/context/WalletProvider";
 import { ethers } from "ethers";
-import React, { useContext } from "react";
+import React from "react";
 import { showAddress } from "@/utils/Features";
 
-const Header = () => {
-  const { account, connectWallet, disconnectWallet } =
-    useContext(walletContext);
-
+const Header = ({ account, connectWallet, disconnectWallet }) => {
   return (
     <div>
       <div className="flex items-center justify-between p-2">
