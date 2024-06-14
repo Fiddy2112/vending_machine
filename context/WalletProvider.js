@@ -1,6 +1,7 @@
 import { ethers } from "ethers";
 import React, { createContext, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import VendingABI from "../utils/Vending.json";
 
 export const walletContext = createContext();
 
@@ -10,8 +11,8 @@ function WalletProvider({ children }) {
   const [provider, setProvider] = useState(null);
 
   const connectWallet = async () => {
-    let contractAddress = "";
-    let contractABI = "";
+    let contractAddress = "0x47bd80d36b603DA3109c7Ed7456155Bd51feDD2F";
+    let contractABI = VendingABI.abi;
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
 
