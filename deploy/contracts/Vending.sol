@@ -3,11 +3,11 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 contract Vending{
-    address public owner;
+    address payable public owner; 
     mapping(address => uint) public balances;
 
     constructor() {
-        owner = msg.sender;
+        owner = payable(msg.sender);
         balances[address(this)]= 1000;
     }
 
@@ -31,6 +31,10 @@ contract Vending{
 
     function getBalance()public view returns(uint){
         return balances[address(this)];
+    }
+
+    function withdraw() external onlyOwner{
+        owner.transfer(address(this).balance);
     }
 
 }
